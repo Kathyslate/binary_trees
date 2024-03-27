@@ -3,7 +3,7 @@
 
 
 /**
- * binary_tree_height_b - Measures height of a binary tree for a bal tree
+ * binary_tree_height_14 - Measures height of a binary tree for a bal tree
  * @tree: tree to go through
  * Return: the height
  */
