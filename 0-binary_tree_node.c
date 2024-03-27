@@ -3,7 +3,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_node - Creates a new binary tree node
+ * binary_tree_node - Creates a new binary tree
  *
  * @parent: Pointer to the parent node
  * @value: The value to store in the node
