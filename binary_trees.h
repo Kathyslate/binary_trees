@@ -47,4 +47,10 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 size_t binary_tree_height_14(const binary_tree_t *tree);
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	const binary_tree_t *second);
+size_t get_binary_tree_height(const binary_tree_t *root_node);
+void get_binary_tree_level(const binary_tree_t *root_node,
+	size_t level, void (*function)(int));
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
+int binary_tree_is_complete(const binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
