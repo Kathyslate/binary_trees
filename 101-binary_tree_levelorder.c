@@ -23,7 +23,8 @@ size_t get_binary_tree_height(const binary_tree_t *root_node)
 }
 
 /**
- * get_binary_tree_level - perform a function on a specific level of a binary tree
+ * get_binary_tree_level - perform a function on a
+ * specific level of a binary tree
  * @root_node: pointer to the root of the tree
  * @level: level of the tree to perform a function on
  * @function: function to perform
@@ -31,7 +32,8 @@ size_t get_binary_tree_height(const binary_tree_t *root_node)
  * Return: void
  */
 
-void get_binary_tree_level(const binary_tree_t *root_node, size_t level, void (*function)(int))
+void get_binary_tree_level(const binary_tree_t *root_node,
+	size_t level, void (*function)(int))
 {
 	if (root_node == NULL)
 		return;
