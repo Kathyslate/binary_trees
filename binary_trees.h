@@ -53,6 +53,10 @@ void get_binary_tree_level(const binary_tree_t *root_node,
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
 
+bst_t *swap_nodes(bst_t *node_a, bst_t *node_b);
+size_t size_binary_tree(const binary_tree_t *tree);
+heap_t *swap_head_node(heap_t *head_node, heap_t *node);
+heap_t *perc_down(heap_t *node);
 int heap_extract(heap_t **root);
 int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
