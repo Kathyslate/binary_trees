@@ -134,12 +134,12 @@ void insert_node(heap_t **root, heap_t *node)
 
 
 /**
- * heap_insert_node - insert_nodes a value in Max Binary Heap
+ * heap_insert - insert_nodes a value in Max Binary Heap
  * @root: double pointer to root of tree
  * @value: input value
  * Return: pointer to the created node, or NULL on failure
  */
-heap_t *heap_insert_node(heap_t **root, int value)
+heap_t *heap_insert(heap_t **root, int value)
 {
 	heap_t *ht = NULL, *ret;
 
