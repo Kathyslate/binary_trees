@@ -74,12 +74,12 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	size_t left_height, right_height;
 	binary_tree_t *left_node, *right_node;
 
-	if (root_node == NULL)
+	if (tree == NULL)
 		return (0);
-	if (binary_tree_is_leaf(root_node))
+	if (binary_tree_is_leaf(tree))
 		return (1);
-	left_node = root_node->left;
-	right_node = root_node->right;
+	left_node = tree->left;
+	right_node = tree->right;
 	left_height = binary_tree_height(left_node);
 	right_height = binary_tree_height(right_node);
 	if (left_height == right_height)
