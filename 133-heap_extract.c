@@ -40,45 +40,45 @@
  */
 bst_t *swap_nodes(bst_t *node_a, bst_t *node_b)
 {
-    bst_t node_a_copy = INITIAL_NODE_VALUE;
+	bst_t node_a_copy = INITIAL_NODE_VALUE;
 
-    node_a_copy.n = node_a->n;
-    node_a_copy.parent = node_a->parent;
-    node_a_copy.left = node_a->left;
-    node_a_copy.right = node_a->right;
-    node_a->parent = node_b;
-    node_a->left = node_b->left;
-    node_a->right = node_b->right;
-    if (node_b->left)
-        node_b->left->parent = node_a;
-    if (node_b->right)
-        node_b->right->parent = node_a;
+	node_a_copy.n = node_a->n;
+	node_a_copy.parent = node_a->parent;
+	node_a_copy.left = node_a->left;
+	node_a_copy.right = node_a->right;
+	node_a->parent = node_b;
+	node_a->left = node_b->left;
+	node_a->right = node_b->right;
+	if (node_b->left)
+		node_b->left->parent = node_a;
+	if (node_b->right)
+ 		node_b->right->parent = node_a;
 
-    node_b->parent = node_a_copy.parent;
-    if (node_a_copy.parent)
-    {
-        if (node_a == node_a_copy.parent->left)
-            node_a_copy.parent->left = node_b;
-        else
-            node_a_copy.parent->right = node_b;
-    }
-    if (node_b == node_a_copy.left)
-    {
-        node_b->left = node_a;
-        node_b->right = node_a_copy.right;
-        if (node_a_copy.right)
-            node_a_copy.right->parent = node_b;
-    }
-    else if (node_b == node_a_copy.right)
-    {
-        node_b->right = node_a;
-        node_b->left = node_a_copy.left;
-        if (node_a_copy.left)
-            node_a_copy.left->parent = node_b;
-    }
-    while (node_b->parent)
-        node_b = node_b->parent;
-    return (node_b);
+	node_b->parent = node_a_copy.parent;
+	if (node_a_copy.parent)
+	{
+		if (node_a == node_a_copy.parent->left)
+			node_a_copy.parent->left = node_b;
+		else
+			node_a_copy.parent->right = node_b;
+	}
+	if (node_b == node_a_copy.left)
+	{
+		node_b->left = node_a;
+		node_b->right = node_a_copy.right;
+		if (node_a_copy.right)
+			node_a_copy.right->parent = node_b;
+	}
+	else if (node_b == node_a_copy.right)
+	{
+		node_b->right = node_a;
+		node_b->left = node_a_copy.left;
+		if (node_a_copy.left)
+			node_a_copy.left->parent = node_b;
+	}
+	while (node_b->parent)
+		node_b = node_b->parent;
+	return (node_b);
 }
 
 /**
