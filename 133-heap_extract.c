@@ -52,7 +52,7 @@ bst_t *swap_nodes(bst_t *node_a, bst_t *node_b)
 	if (node_b->left)
 		node_b->left->parent = node_a;
 	if (node_b->right)
- 		node_b->right->parent = node_a;
+		node_b->right->parent = node_a;
 
 	node_b->parent = node_a_copy.parent;
 	if (node_a_copy.parent)
